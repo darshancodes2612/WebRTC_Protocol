@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoCallAppl</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="h-100">
+    <div class="h-100" id="video_display">
+        <div id ="video_container" class="align-items-center" style="margin-top: 10%;">
+                  <div class="local_div" id="div1" style="">
+                <!-- For playing local video -->
+                <video id="localVideo" class="" autoplay muted playsinline></video>
+            </div>
+            <div class="remote_div" id="div2">
+                <!-- For playing local audio -->
+                <video id="remoteVideo" class="" autoplay playsinline></video>
+            </div>
+            </div>
+    </div>
+
+    <!--Import socket for signaling-->
+    <script src="/socket.io/socket.io.js"></script>
+    <!--WebRTC adapter for compatiblity with all the browsers-->
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <!--import script containing webrtc functions-->
+    <script src="main.js"></script>
+</body>
+</html>
